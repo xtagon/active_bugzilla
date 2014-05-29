@@ -1,5 +1,9 @@
 module ActiveBugzilla
   class Base
+    def self.connect!(*args)
+      @@service = ::ActiveBugzilla::Service.new(*args)
+    end
+
     def self.service=(service)
       @@service = service
     end

@@ -8,6 +8,8 @@ require 'active_bugzilla/comment'
 require 'active_bugzilla/field'
 require 'active_bugzilla/flag'
 
+require 'active_bugzilla/railtie' if defined? ::Rails::Railtie
+
 module ActiveBugzilla
   # Convenience method for accessing ActiveBugzilla::Base.service.execute
   class << self
